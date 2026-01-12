@@ -1,0 +1,14 @@
+<h2>🎧 Audio Downloader (MP3)</h2>
+
+<form method="POST">
+    <input name="url" placeholder="Paste YouTube link" required>
+    <button>Download Audio</button>
+</form>
+
+{% if filename %}
+<a href="/download/{{ filename }}">⬇ Download {{ filename }}</a>
+{% endif %}
+
+{% if error %}
+<p style="color:red">{{ error }}</p>
+{% endif %}
